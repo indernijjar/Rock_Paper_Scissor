@@ -15,11 +15,13 @@ public class main {
         int computerWins = 0;
         boolean playAgain = true;
 
-        System.out.println("WELCOME TO ROCK, PAPER, SCISSORS!");
+        System.out.println("\nWELCOME TO ROCK, PAPER, SCISSORS!");
 
         while(playAgain){
 
-            System.out.println("Your turn: ");
+            for(int i = 0; i < 3; i++){
+
+            System.out.print("\nYour turn: ");
             userChoice = input.nextLine();
 
             num = random.nextInt(3);
@@ -32,58 +34,67 @@ public class main {
             if(num == 2){
                 computerChoice = "Scissors";
 
-             }
+            }
 
             System.out.println("Computer turn: " + computerChoice);
 
             if(userChoice.equals(computerChoice)){
                 System.out.println("It's a tie!");
-                System.out.println("User Wins: " + userWins + " Computer Wins: " + computerWins);
+                System.out.println("\nUser Wins: " + userWins + " Computer Wins: " + computerWins);
             }
-            if(userChoice.equals("Scissors") && computerChoice.equals("Paper")){
+            else if(userChoice.equals("Scissors") && computerChoice.equals("Paper")){
                 System.out.println("You Win!");
                 userWins++;
-                System.out.println("User Wins: " + userWins + " Computer Wins: " + computerWins);
+                System.out.println("\nUser Wins: " + userWins + " Computer Wins: " + computerWins);
             }
-            if(userChoice.equals("Rock") && computerChoice.equals("Scissors")){
+            else if(userChoice.equals("Rock") && computerChoice.equals("Scissors")){
                 System.out.println("You Win!");
                 userWins++;
-                System.out.println("User Wins: " + userWins + " Computer Wins: " + computerWins);
+                System.out.println("\nUser Wins: " + userWins + " Computer Wins: " + computerWins);
             }
-            if(userChoice.equals("Paper") && computerChoice.equals("Rock")){
+            else if(userChoice.equals("Paper") && computerChoice.equals("Rock")){
                 System.out.println("You Win!");
                 userWins++;
-                System.out.println("User Wins: " + userWins + " Computer Wins: " + computerWins);
+                System.out.println("\nUser Wins: " + userWins + " Computer Wins: " + computerWins);
             }
-            if(userChoice.equals("Rock") && computerChoice.equals("Paper")){
+            else if(userChoice.equals("Rock") && computerChoice.equals("Paper")){
                 System.out.println("Computer Wins!");
                 computerWins++;
-                System.out.println("User Wins: " + userWins + " Computer Wins: " + computerWins);
+                System.out.println("\nUser Wins: " + userWins + " Computer Wins: " + computerWins);
             }
-            if(userChoice.equals("Paper") && computerChoice.equals("Scissors")){
+            else if(userChoice.equals("Paper") && computerChoice.equals("Scissors")){
                 System.out.println("Computer Wins!");
                 computerWins++;
-                System.out.println("User Wins: " + userWins + " Computer Wins: " + computerWins);
+                System.out.println("\nUser Wins: " + userWins + " Computer Wins: " + computerWins);
             }
-            if(userChoice.equals("Scissors") && computerChoice.equals("Rock")){
+            else if(userChoice.equals("Scissors") && computerChoice.equals("Rock")){
                 System.out.println("Computer Wins!");
                 computerWins++;
-                System.out.println("User Wins: " + userWins + " Computer Wins: " + computerWins);
+                System.out.println("\nUser Wins: " + userWins + " Computer Wins: " + computerWins);
          
             }
-
     
-}
-if(userWins == computerWins){
-    System.out.println("The series is a tie.");
-}
-if(userWins > computerWins){
-    System.out.println("User wins the series!");
-}
-if(userWins < computerWins){
-    System.out.println("Computer wins the series!");
-    }
- 
-}
+            }
+             if(userWins == computerWins){
+                System.out.println("\nThe series is a tie.");
+            }
+            else if(userWins > computerWins){
+                System.out.println("\nUser wins the series!");
+            }
+            else if(userWins < computerWins){
+                System.out.println("\nComputer wins the series!");
+            }
 
-}
+                System.out.println("\nDo you want to play again? (yes/no)");
+                userChoice = input.nextLine().trim().toLowerCase();
+
+                if(userChoice.equals("yes")){
+                    playAgain = true;
+                }
+
+                if(userChoice.equals("no")){
+                    playAgain = false;
+                }
+                }
+            }
+            }
